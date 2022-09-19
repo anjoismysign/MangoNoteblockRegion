@@ -91,10 +91,15 @@ public class MusicRegister {
                     }
                 }
 
-                musicManager.getRegionSongs().put(rg, new RadioSongPlayer(songs.get(0)));
+                if (!musicManager.getRegionSongs().containsKey(rg)) {
+                    musicManager.getRegionSongs().put(rg, new RadioSongPlayer(songs.get(0)));
+                } else {
+                    musicManager.getRegionSongs().replace(rg, new RadioSongPlayer(songs.get(0)));
+                }
+
                 musicManager.getRegionSongs().get(rg).setAutoDestroy(false);
                 musicManager.getRegionSongs().get(rg).setPlaying(true);
-                musicManager.getRegionSongs().get(rg).setLoop(true);
+                musicManager.getRegionSongs().get(rg).setLoop(config.getBoolean("regions." + world + "." + region + ".loop"));
                 musicManager.getRegionSongs().get(rg).setRandom(config.getBoolean("regions." + world + "." + region + ".shuffle"));
                 musicManager.getRegionSongs().get(rg).setVolume((byte) config.getInt("regions." + world + "." + region + ".volume"));
             }
