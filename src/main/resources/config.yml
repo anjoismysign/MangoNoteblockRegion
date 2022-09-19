@@ -7,3 +7,4 @@ regions:
       volume: 100
       shuffle: false
       loop: true
+      tick: 10

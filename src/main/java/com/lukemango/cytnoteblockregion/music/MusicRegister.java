@@ -102,6 +102,7 @@ public class MusicRegister {
                 musicManager.getRegionSongs().get(rg).setLoop(config.getBoolean("regions." + world + "." + region + ".loop"));
                 musicManager.getRegionSongs().get(rg).setRandom(config.getBoolean("regions." + world + "." + region + ".shuffle"));
                 musicManager.getRegionSongs().get(rg).setVolume((byte) config.getInt("regions." + world + "." + region + ".volume"));
+                musicManager.getRegionSongs().get(rg).setTick((short) config.getInt("regions." + world + "." + region + ".tick"));
             }
         }
         plugin.getLogger().log(INFO, "Loaded " + musicManager.getRegionSongs().size() + " regions!");

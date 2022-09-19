@@ -1,7 +1,6 @@
 package com.lukemango.cytnoteblockregion.music;
 
 import com.lukemango.cytnoteblockregion.CYTNoteblockRegion;
-import com.lukemango.cytnoteblockregion.utils.WorldGuardUtil;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import com.xxmicloxx.NoteBlockAPI.model.Song;
 import com.xxmicloxx.NoteBlockAPI.songplayer.RadioSongPlayer;
