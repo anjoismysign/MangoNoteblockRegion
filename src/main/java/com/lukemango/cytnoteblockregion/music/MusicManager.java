@@ -11,14 +11,13 @@ import java.util.Map;
 public class MusicManager {
 
     private final CYTNoteblockRegion plugin;
-    private final MusicRegister musicRegister;
 
     private final Map<String, Song> songs = new HashMap<>();
     private final Map<ProtectedRegion, RadioSongPlayer> regionSongs = new HashMap<>();
 
     public MusicManager(CYTNoteblockRegion plugin) {
         this.plugin = plugin;
-        this.musicRegister = new MusicRegister(this);
+        MusicRegister musicRegister = new MusicRegister(this);
 
         musicRegister.loadSongs();
         musicRegister.loadRegions();
